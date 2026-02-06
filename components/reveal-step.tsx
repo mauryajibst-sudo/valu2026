@@ -3,13 +3,31 @@
 import { useEffect, useState } from 'react'
 import { Sparkles } from '@/components/sparkles'
 
+const messages = [
+  "Because moments with you mean everything to me ✨❤️",
+  "You make even the simplest days feel special 💕",
+  "Every smile of yours is my favorite reward 😊💖",
+  "I'll bring snacks, smiles, and hugs 🥰🍫",
+  "This yes comes with unlimited cuddles 🤗💞"
+]
+
 export function RevealStep() {
   const [showSparkles, setShowSparkles] = useState(true)
+  const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
 
   useEffect(() => {
     // Auto-hide sparkles after animation completes
     const timer = setTimeout(() => setShowSparkles(false), 3000)
     return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    // Change message every 3 seconds
+    const messageInterval = setInterval(() => {
+      setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length)
+    }, 3000)
+
+    return () => clearInterval(messageInterval)
   }, [])
 
   useEffect(() => {
@@ -46,9 +64,12 @@ export function RevealStep() {
       🎀🫶🏻💌 To My Valentine 💌🫶🏻🎀
       </h3>
 
-      {/* Sweet message */}
-      <p className="text-xl sm:text-2xl text-foreground/80 mb-4 leading-relaxed">
-        You make my days brighter just by being in them.
+      {/* Dynamic sweet message */}
+      <p 
+        key={currentMessageIndex}
+        className="text-xl sm:text-2xl text-foreground/80 mb-4 leading-relaxed animate-fadeInUp min-h-[3rem] flex items-center justify-center"
+      >
+        {messages[currentMessageIndex]}
       </p>
 
       {/* Loving line */}
