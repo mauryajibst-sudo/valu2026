@@ -44,7 +44,7 @@ export function RoseRevealStep() {
       <div className={`mb-8 flex flex-col items-center gap-3 transition-opacity duration-500 delay-400 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
         <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-3xl overflow-hidden shadow-lg">
           <img 
-            src="/Roseday.jpg" 
+            src="/RoseDay.jpg" 
             alt="My favorite person"
             className="w-full h-full object-cover"
             onError={(e) => {
