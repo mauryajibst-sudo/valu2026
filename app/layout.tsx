@@ -9,8 +9,8 @@ const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Will You Be My Valentine?',
-  description: 'A cute Valentine\'s Day micro-experience ❤️',
+  title: 'Happy Rose Day, My Love 🌹',
+  description: 'A sweet Rose Day micro-experience 🌹❤️',
   generator: 'v0.app',
   themeColor: '#f472b6',
   viewport: {

@@ -23,6 +23,40 @@ body {
   }
 }
 
+@keyframes floatDown {
+  0% {
+    transform: translateY(-100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatDownSlow {
+  0% {
+    transform: translateY(-100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-30px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 0 20px rgba(244, 114, 182, 0.5);
@@ -97,6 +131,14 @@ body {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-floatDown {
+  animation: floatDown 8s linear infinite;
+}
+
+.animate-floatDownSlow {
+  animation: floatDownSlow 12s linear infinite;
 }
 
 .animate-glow {
