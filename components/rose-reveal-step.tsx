@@ -53,6 +53,30 @@ export function RoseRevealStep() {
             }}
           />
         </div>
+        <div className="relative w-40 h-40 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-lg">
+          <img 
+            src="/love.png" 
+            alt="My favorite person"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
+            onError={(e) => {
+              // Hide image container if image fails to load
+              e.currentTarget.parentElement?.parentElement?.classList.add('hidden')
+            }}
+          />
+        </div>
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-3xl overflow-hidden shadow-lg">
+          <img 
+            src="/Rose.jpg" 
+            alt="My favorite person"
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              // Hide image container if image fails to load
+              e.currentTarget.parentElement?.parentElement?.classList.add('hidden')
+            }}
+          />
+        </div>
+       
         <p className="text-sm sm:text-base text-foreground/60 font-light">
           My favorite person 🤍
         </p>
