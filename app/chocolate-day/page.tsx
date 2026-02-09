@@ -5,7 +5,7 @@ import { FloatingHearts } from '@/components/floating-hearts'
 import { ChocolateInteractionStep } from '@/components/chocolate-interaction-step'
 import { ChocolateRevealStep } from '@/components/chocolate-reveal-step'
 
-export default function Page() {
+export default function ChocolateDayPage() {
   const [showReveal, setShowReveal] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
